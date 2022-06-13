@@ -1,0 +1,7 @@
+{
+  "name": "renovation-site",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
