@@ -1,0 +1,18 @@
+.homepagetitle{
+    margin-inline:auto;
+    font-style: italic;
+}
+
+.servicelist{
+    background-color: #534861;
+    padding-left:0;
+
+}
+.serviceitem{
+    padding-left:0;
+}
+#quoteBtn{
+    margin:3% 0%;
+    margin-inline:auto;
+    border:2.5px solid white;
+}

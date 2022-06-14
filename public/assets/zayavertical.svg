@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="481.382 64.522 235.723 255.284" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="190.523" y1="133.89" x2="190.523" y2="210.854" id="gradient-0" spreadMethod="reflect" gradientTransform="matrix(1.267127, 0, 0, 1.267127, 124.417348, -90.192955)">
+      <stop offset="0" style="stop-color: rgb(98, 120, 239);"/>
+      <stop offset="1" style="stop-color: rgb(25, 226, 216);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="348.104" y1="143.583" x2="348.104" y2="246.329" id="gradient-1" gradientTransform="matrix(1.267127, 0, 0, 1.267127, 124.417348, -90.192955)">
+      <stop offset="0" style="stop-color: rgb(98, 120, 239);"/>
+      <stop offset="1" style="stop-color: rgb(25, 226, 216);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="354.457" y1="186.232" x2="354.457" y2="265.069" id="gradient-2" gradientTransform="matrix(1.267127, 0, 0, 1.267127, 124.417348, -90.192955)">
+      <stop offset="0" style="stop-color: rgb(98, 120, 239);"/>
+      <stop offset="1" style="stop-color: rgb(25, 226, 216);"/>
+    </linearGradient>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="403.246" y1="147.076" x2="403.246" y2="248.215" id="gradient-3" gradientTransform="matrix(1.267127, 0, 0, 1.267127, 124.417348, -90.192955)">
+      <stop offset="0" style="stop-color: rgb(98, 120, 239);"/>
+      <stop offset="1" style="stop-color: rgb(25, 226, 216);"/>
+    </linearGradient>
+    <style bx:fonts="Allerta">@import url(https://fonts.googleapis.com/css2?family=Allerta%3Aital%2Cwght%400%2C400&amp;display=swap);</style>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 95.867134, 60.627064)">
+    <title>Layer 1</title>
+  </g>
+  <path style="stroke: rgb(0, 0, 0); fill: url(#gradient-1);" d="M 605.221 104.436 L 489.359 194.916 L 488.364 221.937 L 501.641 221.528 L 502.051 199.419 L 641.66 92.154 L 496.319 91.745 L 496.319 104.846 L 605.221 104.436 Z"/>
+  <path style="stroke: rgb(0, 0, 0); fill: url(#gradient-0); fill-rule: nonzero; paint-order: fill;" d="M 561.532 69.637 L 562.351 81.101 L 670.026 82.738 C 670.026 82.738 565.217 166.668 565.626 167.077 C 566.035 167.486 586.506 166.258 586.506 166.258 L 704.008 70.047 L 561.532 69.637 Z"/>
+  <path style="stroke: rgb(0, 0, 0); fill: url(#gradient-3);" d="M 595.259 211.624 L 702.116 213.672 C 702.116 213.672 702.116 224.726 702.116 224.316 C 702.116 223.905 559.642 223.497 559.642 223.497 L 698.022 117.051 L 698.022 96.58 L 709.251 96.639 L 709.076 123.601 L 595.259 211.624 Z"/>
+  <path style="stroke: rgb(0, 0, 0); fill: url(#gradient-2);" d="M 537.533 232.992 L 643.57 231.762 L 643.16 245.683 C 643.16 245.683 502.732 245.274 503.552 245.274 C 504.372 245.274 624.738 145.787 624.738 145.787 L 642.751 145.787 C 642.751 145.787 537.942 234.219 537.533 232.992 Z"/>
+  <text style="font-family: Allerta; font-size: 29.7px; white-space: pre;" x="122.416" y="292.653" transform="matrix(1, 0, 0, 1, 368.766815, -10.339272)">ZAYA<tspan x="122.41600036621094" dy="1em">​</tspan>RENOVATIONS</text>
+</svg>
