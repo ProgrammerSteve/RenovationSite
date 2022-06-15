@@ -1,0 +1,9 @@
+.slidingpic{
+    margin-inline: auto;
+}
+
+
+.no-border{
+    border: none;
+    outline: none;
+}
