@@ -1,0 +1,12 @@
+
+
+
+
+.page-container{
+    width:min(80%,992px);
+    margin-inline: auto;
+}
+
+body, html{
+    background-color: beige;
+}

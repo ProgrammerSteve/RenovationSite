@@ -25,6 +25,7 @@ import {
 
 import { ellipsisHorizontal, ellipsisVertical, archive } from "ionicons/icons";
 
+
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab2.css";
 
@@ -34,17 +35,16 @@ const slideOpts = {
 };
 
 const Tab2: React.FC = () => {
-
   return (
-    <IonPage>
+    <IonPage className="page-container">
       <IonContent fullscreen color="medium">
         <IonCard color="primary" className="ion-margin">
           <IonSlides pager={true} options={slideOpts}>
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic1.png`}
@@ -54,17 +54,26 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Electrical Work</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Electrical Work
+                      </IonLabel>
                     </IonItem>
-
-                    <IonItem color="primary" className="ion-no-border">
-                      <IonText className="ion-text-center ion-no-border">
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
                         An intricate electrical installation on the ceiling of
                         an industrial building.
                       </IonText>
                     </IonItem>
-                    <IonItem className="ion-text-center" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>
@@ -72,9 +81,9 @@ const Tab2: React.FC = () => {
 
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic2.png`}
@@ -84,15 +93,25 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Installing Electrical Outlets</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Installing Electrical Outlets
+                      </IonLabel>
                     </IonItem>
-                    <IonItem color="primary" className="no-border">
-                      <IonText>
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
                         An electrical outlet installation in a residental home.
                       </IonText>
                     </IonItem>
-                    <IonItem className="no-border" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>
@@ -100,9 +119,9 @@ const Tab2: React.FC = () => {
 
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic3.png`}
@@ -112,13 +131,25 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Drywall Installation</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Drywall Installation
+                      </IonLabel>
                     </IonItem>
-                    <IonItem color="primary" className="no-border">
-                      <IonText>A drywall installation for a garage.</IonText>
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
+                        A drywall installation for a garage.
+                      </IonText>
                     </IonItem>
-                    <IonItem className="no-border" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>
@@ -126,9 +157,9 @@ const Tab2: React.FC = () => {
 
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic4.png`}
@@ -138,15 +169,25 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Light Installation</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Light Installation
+                      </IonLabel>
                     </IonItem>
-                    <IonItem color="primary" className="no-border">
-                      <IonText>
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
                         A lighting installation job in a industrial building.
                       </IonText>
                     </IonItem>
-                    <IonItem className="no-border" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>
@@ -154,9 +195,9 @@ const Tab2: React.FC = () => {
 
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic5.png`}
@@ -166,16 +207,26 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Light Installation</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Light Installation
+                      </IonLabel>
                     </IonItem>
-                    <IonItem color="primary" className="no-border">
-                      <IonText>
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
                         Another lighting installation job in a industrial
                         building.
                       </IonText>
                     </IonItem>
-                    <IonItem className="no-border" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>
@@ -183,9 +234,9 @@ const Tab2: React.FC = () => {
 
             <IonSlide>
               <IonGrid>
-                <IonRow>
+                <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem color="primary">
+                    <IonItem lines="none" color="primary">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic6.png`}
@@ -195,16 +246,26 @@ const Tab2: React.FC = () => {
                 </IonRow>
                 <IonRow>
                   <IonCol>
-                    <IonItem color="primary" className="ion-text-center">
-                      <IonLabel>Drywall Installation/Painting</IonLabel>
+                    <IonItem
+                      lines="none"
+                      color="primary"
+                      className="ion-text-center"
+                    >
+                      <IonLabel className="ion-no-border">
+                        Drywall Installation/Painting
+                      </IonLabel>
                     </IonItem>
-                    <IonItem color="primary" className="no-border">
-                      <IonText>
+                    <IonItem lines="none" color="primary">
+                      <IonText className="ion-text-center">
                         Drywall installation job followed by paint and
                         texturing.
                       </IonText>
                     </IonItem>
-                    <IonItem className="no-border" color="primary"></IonItem>
+                    <IonItem
+                      lines="none"
+                      className="ion-text-center"
+                      color="primary"
+                    ></IonItem>
                   </IonCol>
                 </IonRow>
               </IonGrid>

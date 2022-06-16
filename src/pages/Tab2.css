@@ -5,5 +5,10 @@
 
 .no-border{
     border: none;
+    border-bottom: none !important;
     outline: none;
+    text-decoration: none;
+    box-shadow: none;
+
+
 }
