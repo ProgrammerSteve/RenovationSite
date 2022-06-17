@@ -40,11 +40,19 @@ const Tab2: React.FC = () => {
       <IonContent fullscreen color="medium">
         <IonCard color="primary" className="ion-margin">
           <IonSlides pager={true} options={slideOpts}>
+
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic1.png`}
@@ -79,11 +87,18 @@ const Tab2: React.FC = () => {
               </IonGrid>
             </IonSlide>
 
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic2.png`}
@@ -117,11 +132,26 @@ const Tab2: React.FC = () => {
               </IonGrid>
             </IonSlide>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic3.png`}
@@ -155,11 +185,26 @@ const Tab2: React.FC = () => {
               </IonGrid>
             </IonSlide>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic4.png`}
@@ -193,11 +238,33 @@ const Tab2: React.FC = () => {
               </IonGrid>
             </IonSlide>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic5.png`}
@@ -232,11 +299,30 @@ const Tab2: React.FC = () => {
               </IonGrid>
             </IonSlide>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <IonSlide>
               <IonGrid>
                 <IonRow className="ion-margin-top">
                   <IonCol>
-                    <IonItem lines="none" color="primary">
+                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
                       <IonImg
                         className="slidingpic"
                         src={`/assets/opt-pic6.png`}

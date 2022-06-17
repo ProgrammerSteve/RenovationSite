@@ -1,12 +1,365 @@
 
+:root {
+    --small-service-txt:10x;
+    --medium-service-txt: 14px;
+    --large-service-txt: 16px;
+    --xlarge-service-txt:18px;
+
+    --small-body-txt:12px;
+    --medium-body-txt: 16px;
+    --large-body-txt: 24px;
+    --xlarge-body-txt:30px;
+
+    --small-subtitle-txt:18x;
+    --medium-subtitle-txt: 24px;
+    --large-subtitle-txt: 30px;
+    --xlarge-subtitle-txt:36px;
 
 
 
-.page-container{
-    width:min(80%,992px);
-    margin-inline: auto;
+
+
+
+    --small-title-txt:20px;
+    --medium-title-txt: 26px;
+    --large-title-txt: 36px;
+    --xlarge-title-txt:42px;
+
+
+    --small-largesubtitle-txt:18px;
+    --medium-largesubtitle-txt: 30px;
+    --large-largesubtitle-txt: 36px;
+    --xlarge-largesubtitle-txt:42px;
+
+
+    --small-quote-height:40px;
+    --small-quote-width:100%;
+    --small-quote-txt:20px;
+
+    --medium-quote-height:50px;
+    --medium-quote-width:100%;
+    --medium-quote-txt:24px;
+
+    --large-quote-height:60px;
+    --large-quote-width:100%;
+    --large-quote-txt:30px;
+
+    --xlarge-quote-height:70px;
+    --xlarge-quote-width:100%;
+    --xlarge-quote-txt:30px;
+  }
+
+
+
+.autocenter{
+    margin-inline:auto;
+}
+.flexcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.flexitem{
+   width:47% ;
+   display: flex;
+   justify-content: start;
+   padding:0px 2%;
 }
 
-body, html{
-    background-color: beige;
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    .page-container{
+        width:100%;
+        margin-inline: auto;
+    }
+    .homepagetitle{
+        margin-inline:auto;
+        font-style: italic;
+        font-size: var(--small-title-txt);
+    }
+    .servicelist{
+        background-color: #534861;
+        padding-left:0;
+    }
+    .serviceitem{
+        padding-left:0;
+    }
+    .servicetxt{
+        font-size: var(--small-service-txt);
+    }
+    .hometxt{
+        font-size: var(--small-body-txt);
+    }
+    .subtitle{
+        font-size: var(--small-subtitle-txt);
+    }
+    .lg-subtitle{
+        font-size: var(--small-largesubtitle-txt);
+    }
+    .slidingpic{
+        margin-inline: auto;
+    }
+    .center-margin-in-line{
+        margin-inline: auto;
+        width: 100%;
+    }
+    .quote-col{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-btn{
+        width:var(--small-quote-width);
+        height:var(--small-quote-height);
+    }
+    .quote-btn-txt{
+        font-size: var(--small-quote-txt);
+    }    
+
+    body, html{
+        background-color: beige;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 576px) and (max-width: 768px) {
+
+
+
+    .page-container{
+        width:min(80%,800px);
+        margin-inline: auto;
+    }
+    .homepagetitle{
+        margin-inline:auto;
+        font-style: italic;
+        font-size: var(--medium-title-txt);
+    }
+    .servicelist{
+        background-color: #534861;
+        padding-left:0;
+    }
+    .serviceitem{
+        padding-left:0;
+    }
+    .servicetxt{
+        font-size:var(--medium-service-txt);
+    }
+    .hometxt{
+        font-size: var(--medium-body-txt);
+    }
+    .subtitle{
+        font-size: var(--medium-subtitle-txt);
+    }
+    .lg-subtitle{
+        font-size: var(--medium-largesubtitle-txt);
+    }
+    .slidingpic{
+        margin-inline: auto;
+    }
+    .center-margin-in-line{
+        margin-inline: auto;
+        width: 100%;
+    }
+    .quote-col{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-btn{
+        width:var(--medium-quote-width);
+        height:var(--medium-quote-height);
+    }
+    .quote-btn-txt{
+        font-size: var(--medium-quote-txt);
+    }   
+    body, html{
+        background-color: beige;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .img-container{
+        overflow: hidden;
+        height: 35vh;
+        min-height: 250px;
+    }
+    #home-img{
+        max-width: 100wh;
+
+    }
+    #zaya-logo{
+        padding-top: 2%;
+    }
+
+    
+
+
+    .page-container{
+        width:min(80%,800px);
+        margin-inline: auto;
+    }
+    .homepagetitle{
+        margin-inline:auto;
+        font-style: italic;
+        font-size: var(--large-title-txt);
+    }
+    .servicelist{
+        background-color: #534861;
+        padding-left:0;
+    }
+    .serviceitem{
+        padding-left:0;
+    }
+    .servicetxt{
+        font-size: var(--large-service-txt);
+    }
+    .hometxt{
+        font-size: var(--large-body-txt);
+    }
+    .subtitle{
+        font-size: var(--large-subtitle-txt);
+    }
+    .lg-subtitle{
+        font-size: var(--large-largesubtitle-txt);
+    }
+    .slidingpic{
+        margin-inline: auto;
+    }
+    .center-margin-in-line{
+        margin-inline: auto;
+        width: 100%;
+    }
+    .quote-col{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-btn{
+        width:var(--large-quote-width);
+        height:var(--large-quote-height);
+    }
+    .quote-btn-txt{
+        font-size: var(--large-quote-txt);
+    }   
+    body, html{
+        background-color: beige;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 992px){
+    .img-container{
+        overflow: hidden;
+        height: 40vh;
+        min-height: 250px;
+    }
+    #home-img{
+        max-width: 100wh;
+        max-height: 450px;
+    }
+    #zaya-logo{
+        padding-top: 2%;
+    }
+
+    
+
+    .page-container{
+        width:min(80%,800px);
+        margin-inline: auto;
+    }
+    .homepagetitle{
+        margin-inline:auto;
+        font-style: italic;
+        font-size: var(--xlarge-title-txt);
+    }
+    .servicelist{
+        background-color: #534861;
+        padding-left:0;
+    }
+    .serviceitem{
+        padding-left:0;
+    }
+    .servicetxt{
+        font-size:var(--xlarge-service-txt);
+    }
+    .hometxt{
+        font-size: var(--xlarge-body-txt);
+    }
+    .subtitle{
+        font-size: var(--xlarge-subtitle-txt);
+    }
+    .lg-subtitle{
+        font-size: var(--xlarge-largesubtitle-txt);
+    }
+    .slidingpic{
+        margin-inline: auto;
+    }
+    .center-margin-in-line{
+        margin-inline: auto;
+        width: 100%;
+    }
+    .quote-col{
+        width:100%;
+        display: flex;
+        justify-content: center;
+    }
+    .quote-btn{
+        width:var(--xlarge-quote-width);
+        height:var(--xlarge-quote-height);
+    }
+    .quote-btn-txt{
+        font-size: var(--xlarge-quote-txt);
+    }   
+    body, html{
+        background-color: beige;
+    }
+}
+
+
+

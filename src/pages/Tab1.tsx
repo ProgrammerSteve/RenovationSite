@@ -22,9 +22,46 @@ import {
 // import { Redirect, Route } from 'react-router-dom';
 
 import { callOutline, locationOutline, hammerOutline } from "ionicons/icons";
+import React from "react";
 
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
+
+const serviceList = () => {
+  let elements: any = [];
+  const services = [
+    "Painting",
+    "Texturing",
+    "Drywall",
+    "Exterior Painting",
+    "Interior Painting",
+    "Electrical outlets",
+    "Demolition",
+    "Water damage",
+    "Pressure washing",
+    "Ceiling Fans",
+    "Light fixtures",
+    "Lawn Care",
+    "Mulching",
+    "Yard work",
+    "Add ons",
+    "And more...",
+  ];
+  services.forEach((el) => {
+    elements.push(
+      <IonButton color="dark" className="serviceItem flexitem">
+        <IonText className="servicetxt ion-text-wrap">{`${el}`}</IonText>
+      </IonButton>
+    );
+  });
+  return (
+    <IonRow className="">
+      <IonCol className="flexcontainer" color="primary" size="12">
+        {elements}
+      </IonCol>
+    </IonRow>
+  );
+};
 
 const Tab1: React.FC = () => {
   return (
@@ -32,32 +69,55 @@ const Tab1: React.FC = () => {
       <IonContent color="medium" fullscreen>
         <IonCard color="primary" className="ion-margin">
           <IonItem color="primary" lines="none">
-            <IonCardTitle className="homepagetitle">
-              Making Home Feel Like Home
+            <IonCardTitle className="homepagetitle ion-margin-top ion-margin-bottom">
+              <IonText>Making Home Feel Like Home</IonText>
             </IonCardTitle>
           </IonItem>
 
-          <IonItem color="primary" className="ion-activated" lines="none">
-            <IonImg src="/assets/lights.jpg" />
+
+
+
+
+
+
+          <IonItem  className="ion-activated img-container" lines="none" color="primary">
+            <IonImg id="home-img" src="/assets/lights.jpg" />
           </IonItem>
+
+
+
+
+
 
           <IonItem
             color="primary"
             className="ion-activated ion-margin-top"
             lines="none"
+            id="zaya-logo"
+
           >
             <IonImg src="/assets/zayahorizontal.svg" />
           </IonItem>
 
-          <IonItem color="primary" lines="none">
-            <IonIcon size="small" slot="start" icon={callOutline} />
-            <IonLabel> (512) 359-2470</IonLabel>
+          <IonItem
+            color="primary"
+            lines="none"
+            className="ion-margin-left ion-margin-right"
+          >
+            <IonIcon size="large" slot="start" icon={callOutline} />
+            <IonLabel>
+              <IonText className="hometxt">(512) 359-2470</IonText>{" "}
+            </IonLabel>
           </IonItem>
 
-          <IonItem color="primary" className="ion-margin-bottom" lines="none">
-            <IonIcon size="small" slot="start" icon={locationOutline} />
+          <IonItem
+            color="primary"
+            className="ion-margin-left ion-margin-right ion-margin-bottom"
+            lines="none"
+          >
+            <IonIcon size="large" slot="start" icon={locationOutline} />
             <IonLabel>
-              <IonText className="ion-text-wrap">
+              <IonText className="ion-text-wrap hometxt">
                 820 Daffodil, Los Fresnos, TX 78566
               </IonText>
             </IonLabel>
@@ -68,136 +128,52 @@ const Tab1: React.FC = () => {
           <IonGrid>
             <IonRow>
               <IonCol>
-                <IonItem color="primary">
-                  <IonIcon />
-                  <IonCardTitle> About Us</IonCardTitle>
+                <IonItem color="primary" className="ion-text-center">
+                  <IonCardTitle>
+                    <IonText className="subtitle ion-margin">About Us</IonText>
+                  </IonCardTitle>
                 </IonItem>
               </IonCol>
             </IonRow>
 
-            <IonRow className="ion-text-center">
+            <IonRow className="">
               <IonCol size="12" color="primary">
-                <IonRow>
-                  <IonLabel className="ion-text-centered">
+                <IonItem color="primary" lines="none" className="ion-padding-bottom">
+                  <IonText className="hometxt ion-text-wrap">
                     Zaya Renovations is a family owned renovation company
                     serving the RGV locality. With our passion for home
                     renovation, we hope to service your needs and win your
                     loyalty. Have questions? Receiving a quote is free and easy!
+                  </IonText>
+                </IonItem>
+              </IonCol>
+            </IonRow>
+
+            <IonRow className="ion-padding-bottom">
+              <IonCol className="quote-col" size="12" color="primary">
+                <IonRouterLink href="/tab3">
+                  <IonButton className="quote-btn" color="tertiary">
+                    <IonText className="quote-btn-txt">Free Quote</IonText>
+                  </IonButton>
+                </IonRouterLink>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonCard>
+
+        <IonCard color="primary" className="ion-margin">
+          <IonGrid className="ion-padding-bottom">
+            <IonRow >
+              <IonCol color="" size="7" className="autocenter">
+                <IonItem className="ion-text-center" color="primary">
+                  <IonLabel className="subtitle">
+                    <IonText className="lg-subtitle ">Services:</IonText>
                   </IonLabel>
-                </IonRow>
-
-                <IonRow className="ion-justify-content-center ion-padding">
-                  <IonRouterLink href="/tab3">
-                    <IonButton id="ion-margin ion-padding" color="dark">
-                      Free Quote
-                    </IonButton>
-                  </IonRouterLink>
-                </IonRow>
+                </IonItem>
               </IonCol>
             </IonRow>
 
-            <IonRow className="ion-text-center">
-              <IonCol color="primary" size="12">
-                <IonCardTitle> Some of our services include:</IonCardTitle>
-
-                <IonGrid className="servicelist">
-                  <IonRow>
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem "
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Paint</IonLabel>
-                      </IonItem>
-                    </IonCol>
-
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Drywall</IonLabel>
-                      </IonItem>
-                    </IonCol>
-                  </IonRow>
-
-                  <IonRow>
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Exterior</IonLabel>
-                      </IonItem>
-                    </IonCol>
-
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Interior</IonLabel>
-                      </IonItem>
-                    </IonCol>
-                  </IonRow>
-                  <IonRow>
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Electrical</IonLabel>
-                      </IonItem>
-                    </IonCol>
-
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Demolition</IonLabel>
-                      </IonItem>
-                    </IonCol>
-                  </IonRow>
-
-                  <IonRow>
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>Add ons</IonLabel>
-                      </IonItem>
-                    </IonCol>
-
-                    <IonCol>
-                      <IonItem
-                        color="primary"
-                        className="serviceItem"
-                        lines="none"
-                      >
-                        <IonIcon size="small" icon={hammerOutline} />
-                        <IonLabel>And more...</IonLabel>
-                      </IonItem>
-                    </IonCol>
-                  </IonRow>
-                </IonGrid>
-              </IonCol>
-            </IonRow>
+            {serviceList()}
           </IonGrid>
         </IonCard>
 
@@ -206,7 +182,9 @@ const Tab1: React.FC = () => {
             <IonRow>
               <IonCol>
                 <IonItem color="primary">
-                  <IonCardTitle> Disciplined Work</IonCardTitle>
+                  <IonCardTitle>
+                    <IonText className="subtitle">Disciplined Work</IonText>
+                  </IonCardTitle>
                 </IonItem>
               </IonCol>
             </IonRow>
@@ -215,17 +193,28 @@ const Tab1: React.FC = () => {
                 <IonImg src="/assets/hammer.jpg" />
               </IonCol>
               <IonCol size="6">
-                <IonLabel>
-                  Years of experience have made our workers first-class
-                  craftsmen and will get the project done right the first time.
-                </IonLabel>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  className="ion-padding-left ion-padding-right nopadding"
+                >
+                  <IonLabel className="">
+                    <IonText className="hometxt ion-text-wrap">
+                      Years of experience have made our workers first-class
+                      craftsmen and will get the project done right the first
+                      time.
+                    </IonText>
+                  </IonLabel>
+                </IonItem>
               </IonCol>
             </IonRow>
 
             <IonRow>
               <IonCol>
                 <IonItem color="primary">
-                  <IonCardTitle> Finish the Job</IonCardTitle>
+                  <IonCardTitle>
+                    <IonText className="subtitle">Finish the Job</IonText>{" "}
+                  </IonCardTitle>
                 </IonItem>
               </IonCol>
             </IonRow>
@@ -234,17 +223,27 @@ const Tab1: React.FC = () => {
                 <IonImg src="/assets/blueprint.jpg" />
               </IonCol>
               <IonCol size="6">
-                <IonLabel>
-                  Having trouble with your DIY project? We can help you finish
-                  in a fast and timely manner.
-                </IonLabel>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  className="ion-padding-left ion-padding-right"
+                >
+                  <IonLabel>
+                    <IonText className="hometxt ion-text-wrap">
+                      Having trouble with your DIY project? We can help you
+                      finish in a fast and timely manner.
+                    </IonText>
+                  </IonLabel>
+                </IonItem>
               </IonCol>
             </IonRow>
 
             <IonRow>
               <IonCol>
                 <IonItem color="primary">
-                  <IonCardTitle> Fairly Priced</IonCardTitle>
+                  <IonCardTitle>
+                    <IonText className="subtitle">Fairly Priced</IonText>{" "}
+                  </IonCardTitle>
                 </IonItem>
               </IonCol>
             </IonRow>
@@ -253,10 +252,18 @@ const Tab1: React.FC = () => {
                 <IonImg src="/assets/cash.jpg" />
               </IonCol>
               <IonCol size="6">
-                <IonLabel>
-                  Larger companies need a bigger profit margin to survive.
-                  Contracting with Zaya Renovations will save you money.
-                </IonLabel>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  className="ion-padding-left ion-padding-right nopadding"
+                >
+                  <IonLabel className="">
+                    <IonText className="hometxt ion-text-wrap">
+                      Larger companies need a bigger profit margin to survive.
+                      Contracting with Zaya Renovations will save you money.
+                    </IonText>
+                  </IonLabel>
+                </IonItem>
               </IonCol>
             </IonRow>
           </IonGrid>
