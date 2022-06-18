@@ -41,6 +41,18 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import './App.css';
+import { initializeApp } from "firebase/app";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCJ3kLkk5fPzLMe9HQsTFa8AquelvPN7uo",
+  authDomain: "zayarenovations.firebaseapp.com",
+  projectId: "zayarenovations",
+  storageBucket: "zayarenovations.appspot.com",
+  messagingSenderId: "730952225139",
+  appId: "1:730952225139:web:82751af2f9c692fa967506"
+};
+const app = initializeApp(firebaseConfig);
 
 setupIonicReact();
 
