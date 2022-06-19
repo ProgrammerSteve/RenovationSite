@@ -31,6 +31,8 @@ const Tab3: React.FC = () => {
   const[textArea,setTextArea]=useState("");
 
   const handleSubmitData=async()=>{
+
+
     const requestOptions = {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -42,10 +44,13 @@ const Tab3: React.FC = () => {
           textArea: `${textArea}`,
         })
     };
+  
+
     fetch('http://programmersteve105.pythonanywhere.com/', requestOptions)
       .then(response => response.json())
       .then(data => console.log(data) )
       .catch(error=>console.log(error));
+
     setName('');
     setTel("");
     setEmail('');
@@ -137,7 +142,9 @@ const Tab3: React.FC = () => {
         
         
       </IonContent>
-      <IonFooter>
+
+
+      {/* <IonFooter>
       <IonToolbar color="primary">
     <IonTitle className="ion-margin" >Note:</IonTitle>
   
@@ -146,7 +153,7 @@ const Tab3: React.FC = () => {
     If you are unsure or need help, we will be happy to assist you.
   </IonItem>
   </IonToolbar>
-      </IonFooter>
+      </IonFooter> */}
 
 
     </IonPage>
