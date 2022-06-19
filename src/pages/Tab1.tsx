@@ -68,6 +68,9 @@ const Tab1: React.FC = () => {
     <IonPage className="page-container">
       <IonContent color="medium" fullscreen>
         <IonCard color="primary" className="ion-margin">
+
+
+          
           <IonItem color="primary" lines="none">
             <IonCardTitle className="homepagetitle ion-margin-top ion-margin-bottom">
               <IonText>Making Home Feel Like Home</IonText>

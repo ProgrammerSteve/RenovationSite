@@ -46,7 +46,7 @@ const Tab3: React.FC = () => {
     };
   
 
-    fetch('http://programmersteve105.pythonanywhere.com/', requestOptions)
+    fetch('https://zaya-container-axqzvcglaa-uc.a.run.app/', requestOptions)
       .then(response => response.json())
       .then(data => console.log(data) )
       .catch(error=>console.log(error));
