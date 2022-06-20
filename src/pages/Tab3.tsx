@@ -17,6 +17,7 @@ import
   IonRow,
   IonCol,
   IonFooter,
+  IonAlert,
   IonLabel,
 } from '@ionic/react';
 
@@ -29,33 +30,40 @@ const Tab3: React.FC = () => {
   const[tel,setTel]=useState("");
   const[email,setEmail]=useState("");
   const[textArea,setTextArea]=useState("");
+  const[error,setError]=useState('');
 
-  const handleSubmitData=async()=>{
+  const clearError = () => {
+    setError("");
+  };
 
+  const handleSubmitData=()=>{
+    if(name==''||tel==''||email==''||textArea==''){
+      setError(error=>'Please make sure to not to leave any field empty');
+      return;
+    }else{
+      const requestOptions = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(
+          { 
+            name: `${name}`,
+            tel: `${tel}`,
+            email: `${email}`,
+            textArea: `${textArea}`,
+          })
+      };
+    
+      fetch('https://zaya-container-axqzvcglaa-uc.a.run.app/', requestOptions)
+        .then(response => response.json())
+        .then(data => console.log(data) )
+        .catch(error=>console.log(error));
 
-    const requestOptions = {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(
-        { 
-          name: `${name}`,
-          tel: `${tel}`,
-          email: `${email}`,
-          textArea: `${textArea}`,
-        })
-    };
-  
-
-    fetch('https://zaya-container-axqzvcglaa-uc.a.run.app/', requestOptions)
-      .then(response => response.json())
-      .then(data => console.log(data) )
-      .catch(error=>console.log(error));
-
-    setName('');
-    setTel("");
-    setEmail('');
-    setTextArea('');
-
+      setName('');
+      setTel("");
+      setEmail('');
+      setTextArea('');
+      setError('');
+    }
   }
 
   const handleReset=()=>{
@@ -65,8 +73,15 @@ const Tab3: React.FC = () => {
     setTextArea('');
   }
 
+
   return (
+    
     <IonPage className="page-container">
+      <IonAlert
+        isOpen={!!error}
+        message={error}
+        buttons={[{ text: "Okay", handler: clearError }]}
+      />
       <IonHeader>
         <IonToolbar color="dark">
           <IonTitle >Enter your Infomation</IonTitle>
@@ -78,6 +93,7 @@ const Tab3: React.FC = () => {
           <IonLabel position="floating" color="medium">Name</IonLabel>
           <IonInput 
           value={name}  
+          required
           onIonChange={e => setName(e.detail.value!)} 
           clearInput>
           </IonInput>
@@ -88,16 +104,21 @@ const Tab3: React.FC = () => {
           <IonInput 
           value={tel} 
           inputMode='tel'
+          required
           onIonChange={e => setTel(e.detail.value!)} 
           clearInput>
           </IonInput>
         </IonItem>        
 
         <IonItem color="primary">
-        <IonLabel position="floating" color="medium">Email</IonLabel>
+        <IonLabel 
+        position="floating" 
+        color="medium"
+        >Email</IonLabel>
           <IonInput 
           value={email} 
           inputMode='email'
+          required
           onIonChange={e => setEmail(e.detail.value!)} 
           clearInput>
           </IonInput>
@@ -107,6 +128,7 @@ const Tab3: React.FC = () => {
           <IonTextarea 
           auto-grow
           rows={6}
+          required
 
           value={textArea} 
           onIonChange={e => setTextArea(e.detail.value!)}>

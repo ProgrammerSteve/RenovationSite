@@ -2,19 +2,11 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonItem,
   IonCard,
   IonImg,
-  IonIcon,
   IonLabel,
-  IonCardTitle,
-  IonItemSliding,
-  IonItemOptions,
-  IonItemOption,
   IonSlides,
   IonSlide,
   IonGrid,
@@ -25,7 +17,6 @@ import {
 
 import { ellipsisHorizontal, ellipsisVertical, archive } from "ionicons/icons";
 
-
 import ExploreContainer from "../components/ExploreContainer";
 import "./Tab2.css";
 
@@ -34,328 +25,111 @@ const slideOpts = {
   speed: 400,
 };
 
+const textArr = [
+  [
+    `Electrical Work`,
+    `
+    An intricate electrical installation on the ceiling of
+    an industrial building.
+    `,
+  ],
+  [
+    `Installing Electrical Outlets`,
+    `
+    An intricate electrical installation on the ceiling of
+    an industrial building.
+    `,
+  ],
+  [
+    `Drywall Installation`,
+    `
+    An electrical outlet installation in a residental home.
+    `,
+  ],
+  [
+    `Light Installation`,
+    `A lighting installation job in a industrial building.
+    `,
+  ],
+  [
+    `Light Installation`,
+    `
+    Another lighting installation job in a industrial building,
+    `,
+  ],
+  [
+    `Drywall Installation/Painting`,
+    `
+    Drywall installation job followed by paint and texturing.
+    `,
+  ],
+];
+
 const Tab2: React.FC = () => {
+  const generateSlides = () => {
+    let elements: any = [];
+    textArr.forEach((arr, ind) => {
+      elements.push(
+        <IonSlide>
+          <IonGrid>
+            <IonRow className="ion-margin-top">
+              <IonCol>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  className="ion-justify-content-center"
+                >
+                  <IonImg
+                    className="slidingpic"
+                    src={`/assets/opt-pic${ind + 1}.png`}
+                    style={{
+                      height: "50vh",
+                    }}
+                  />
+                </IonItem>
+              </IonCol>
+            </IonRow>
+
+            <IonRow>
+              <IonCol>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  className="ion-text-center"
+                >
+                  <IonLabel className="ion-no-border">{arr[0]}</IonLabel>
+                </IonItem>
+              </IonCol>
+            </IonRow>
+
+            <IonRow>
+              <IonCol>
+                <IonItem
+                  lines="none"
+                  color="primary"
+                  style={{
+                    display: "grid",
+                    justifyContent: "center",
+                    marginBottom: "2%",
+                  }}
+                >
+                  <IonText>{arr[1]}</IonText>
+                </IonItem>
+              </IonCol>
+            </IonRow>
+          </IonGrid>
+        </IonSlide>
+      );
+    });
+    return elements;
+  };
+
   return (
     <IonPage className="page-container">
       <IonContent fullscreen color="medium">
         <IonCard color="primary" className="ion-margin">
           <IonSlides pager={true} options={slideOpts}>
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic1.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Electrical Work
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        An intricate electrical installation on the ceiling of
-                        an industrial building.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic2.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Installing Electrical Outlets
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        An electrical outlet installation in a residental home.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic3.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Drywall Installation
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        A drywall installation for a garage.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic4.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Light Installation
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        A lighting installation job in a industrial building.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic5.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Light Installation
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        Another lighting installation job in a industrial
-                        building.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <IonSlide>
-              <IonGrid>
-                <IonRow className="ion-margin-top">
-                  <IonCol>
-                    <IonItem lines="none" color="primary" className="ion-justify-content-center">
-                      <IonImg
-                        className="slidingpic"
-                        src={`/assets/opt-pic6.png`}
-                      />
-                    </IonItem>
-                  </IonCol>
-                </IonRow>
-                <IonRow>
-                  <IonCol>
-                    <IonItem
-                      lines="none"
-                      color="primary"
-                      className="ion-text-center"
-                    >
-                      <IonLabel className="ion-no-border">
-                        Drywall Installation/Painting
-                      </IonLabel>
-                    </IonItem>
-                    <IonItem lines="none" color="primary">
-                      <IonText className="ion-text-center">
-                        Drywall installation job followed by paint and
-                        texturing.
-                      </IonText>
-                    </IonItem>
-                    <IonItem
-                      lines="none"
-                      className="ion-text-center"
-                      color="primary"
-                    ></IonItem>
-                  </IonCol>
-                </IonRow>
-              </IonGrid>
-            </IonSlide>
+            {generateSlides()}
           </IonSlides>
         </IonCard>
       </IonContent>
