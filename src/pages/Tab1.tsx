@@ -1,9 +1,6 @@
 import {
   IonContent,
-  IonHeader,
   IonPage,
-  IonTitle,
-  IonToolbar,
   IonCard,
   IonItem,
   IonIcon,
@@ -12,19 +9,19 @@ import {
   IonCardTitle,
   IonGrid,
   IonRow,
-  IonList,
   IonCol,
   IonButton,
   IonText,
   IonRouterLink,
 } from "@ionic/react";
 
-// import { Redirect, Route } from 'react-router-dom';
-
-import { callOutline, locationOutline, hammerOutline } from "ionicons/icons";
+import {
+  callOutline,
+  locationOutline,
+  mailOutline,
+  hammerOutline,
+} from "ionicons/icons";
 import React from "react";
-
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab1.css";
 
 const serviceList = () => {
@@ -68,36 +65,25 @@ const Tab1: React.FC = () => {
     <IonPage className="page-container">
       <IonContent color="medium" fullscreen>
         <IonCard color="primary" className="ion-margin">
-
-
-          
           <IonItem color="primary" lines="none">
             <IonCardTitle className="homepagetitle ion-margin-top ion-margin-bottom">
               <IonText>Making Home Feel Like Home</IonText>
             </IonCardTitle>
           </IonItem>
 
-
-
-
-
-
-
-          <IonItem  className="ion-activated img-container" lines="none" color="primary">
+          <IonItem
+            className="ion-activated img-container"
+            lines="none"
+            color="primary"
+          >
             <IonImg id="home-img" src="/assets/lights.jpg" />
           </IonItem>
-
-
-
-
-
 
           <IonItem
             color="primary"
             className="ion-activated ion-margin-top"
             lines="none"
             id="zaya-logo"
-
           >
             <IonImg src="/assets/zayahorizontal.svg" />
           </IonItem>
@@ -107,9 +93,22 @@ const Tab1: React.FC = () => {
             lines="none"
             className="ion-margin-left ion-margin-right"
           >
-            <IonIcon size="large" slot="start" icon={callOutline} />
+            <IonIcon size="medium" slot="start" icon={callOutline} />
             <IonLabel>
               <IonText className="hometxt">(512) 359-2470</IonText>{" "}
+            </IonLabel>
+          </IonItem>
+
+          <IonItem
+            color="primary"
+            lines="none"
+            className="ion-margin-left ion-margin-right"
+          >
+            <IonIcon size="medium" slot="start" icon={mailOutline} />
+            <IonLabel>
+              <IonText className="ion-text-wrap hometxt">
+                Zayarenovations4u@gmail.com
+              </IonText>{" "}
             </IonLabel>
           </IonItem>
 
@@ -118,7 +117,7 @@ const Tab1: React.FC = () => {
             className="ion-margin-left ion-margin-right ion-margin-bottom"
             lines="none"
           >
-            <IonIcon size="large" slot="start" icon={locationOutline} />
+            <IonIcon size="medium" slot="start" icon={locationOutline} />
             <IonLabel>
               <IonText className="ion-text-wrap hometxt">
                 820 Daffodil, Los Fresnos, TX 78566
@@ -141,7 +140,11 @@ const Tab1: React.FC = () => {
 
             <IonRow className="">
               <IonCol size="12" color="primary">
-                <IonItem color="primary" lines="none" className="ion-padding-bottom">
+                <IonItem
+                  color="primary"
+                  lines="none"
+                  className="ion-padding-bottom"
+                >
                   <IonText className="hometxt ion-text-wrap">
                     Zaya Renovations is a family owned renovation company
                     serving the RGV locality. With our passion for home
@@ -166,7 +169,7 @@ const Tab1: React.FC = () => {
 
         <IonCard color="primary" className="ion-margin">
           <IonGrid className="ion-padding-bottom">
-            <IonRow >
+            <IonRow>
               <IonCol color="" size="7" className="autocenter">
                 <IonItem className="ion-text-center" color="primary">
                   <IonLabel className="subtitle">

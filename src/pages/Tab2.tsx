@@ -15,11 +15,7 @@ import {
   IonText,
 } from "@ionic/react";
 
-import { ellipsisHorizontal, ellipsisVertical, archive } from "ionicons/icons";
-
-import ExploreContainer from "../components/ExploreContainer";
 import "./Tab2.css";
-
 const slideOpts = {
   initialSlide: 1,
   speed: 400,
